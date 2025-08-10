@@ -6,4 +6,4 @@ USER n8n
 
 EXPOSE 5678
 
-CMD ["n8n"]
+ENTRYPOINT ["sh", "-c", "curl -X POST https://api.telegram.org/bot$N8N_TELEGRAM_BOT_TOKEN/setWebhook?url=$N8N_WEBHOOK_URL && n8n start --tunnel"]
