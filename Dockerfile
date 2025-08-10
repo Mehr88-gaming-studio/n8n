@@ -1,6 +1,6 @@
 FROM docker.n8n.io/n8nio/n8n
 
-RUN apt-get update && apt-get install -y curl
+RUN apk add --no-cache curl
 
 EXPOSE 5678
 
